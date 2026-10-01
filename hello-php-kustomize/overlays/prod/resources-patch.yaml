@@ -1,0 +1,16 @@
+# Strategic merge patch: only the fields to change, matched by kind + name.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-php
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello-php          # containers are matched by name
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              memory: 512Mi

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  labels:
+    {{- include "hello-php.labels" . | nindent 4 }}
+data:
+  app.ini: |
+    ; read by index.php at runtime
+    greeting = {{ .Values.greeting | quote }}

@@ -1,0 +1,13 @@
+{{ .Release.Name }} is deployed to namespace {{ .Release.Namespace }} (revision {{ .Release.Revision }}).
+
+  image:    {{ .Values.image.repository }}:{{ .Values.image.tag }}
+  replicas: {{ .Values.replicaCount }}
+  greeting: {{ .Values.greeting }}
+
+Wait for the rollout:
+  oc rollout status deployment/{{ .Release.Name }} -n {{ .Release.Namespace }}
+{{- if .Values.route.enabled }}
+
+Open the application:
+  curl -s https://$(oc get route {{ .Release.Name }} -n {{ .Release.Namespace }} -o jsonpath='{.spec.host}')
+{{- end }}

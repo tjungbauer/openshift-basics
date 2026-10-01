@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello-php
+  labels:
+    app: hello-php
+spec:
+  to:
+    kind: Service
+    name: hello-php
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

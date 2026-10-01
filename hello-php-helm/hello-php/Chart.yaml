@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hello-php
+description: Sample PHP application for the "Containers & OpenShift for Developers" training
+type: application
+version: 0.1.0          # version of the CHART – bump when the templates change
+appVersion: "1.1.0"     # version of the APPLICATION – informational

@@ -1,0 +1,24 @@
+# Defaults – every value can be overridden with -f <file> or --set key=value
+
+replicaCount: 2
+
+image:
+  repository: quay.io/tjungbau/hello-php
+  tag: "1.0.0"            # always quote tags, "1.10" must not become 1.1
+  pullPolicy: Always
+
+greeting: "Hello from Helm"   # ends up in app.ini (ConfigMap)
+
+service:
+  port: 8080
+
+route:
+  enabled: true
+  host: ""                # empty = OpenShift generates <release>-<namespace>.apps.<cluster>
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    memory: 256Mi

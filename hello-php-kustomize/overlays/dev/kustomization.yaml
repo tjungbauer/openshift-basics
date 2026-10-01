@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Only what is DIFFERENT in dev.
+namespace: kustomize-dev
+
+resources:
+  - ../../base
+
+images:
+  - name: quay.io/your-org/hello-php       # what to look for (as in the base)
+    newName: quay.io/tjungbau/hello-php    # what to replace it with
+    newTag: 1.0.0
+
+replicas:
+  - name: hello-php
+    count: 2
+
+configMapGenerator:
+  - name: hello-php-config
+    files:
+      - app.ini
+    options:
+      labels:
+        app: hello-php   # lets you find (and clean up) all generated versions

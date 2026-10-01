@@ -1,0 +1,15 @@
+# Only the differences for prod – Helm merges this file over values.yaml
+
+replicaCount: 3
+
+image:
+  tag: "1.0.0"
+
+greeting: "Hello from PROD"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    memory: 512Mi
