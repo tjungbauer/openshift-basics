@@ -5,7 +5,7 @@
 # ---------------------------------------------------------------------------
 set -euo pipefail
 
-DB_IMAGE="${DB_IMAGE}"
+DB_IMAGE="registry.access.redhat.com/hi/mariadb:11.8"
 
 # ── colours & helpers ──────────────────────────────────────────────────────
 BOLD=$'\033[1m'
