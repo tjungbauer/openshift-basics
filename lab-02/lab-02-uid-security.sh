@@ -130,8 +130,8 @@ fi
 
 printf "\n%s" "${BOLD}"
 printf "  ╔══════════════════════════════════════════════════════╗\n"
-printf "  ║   Lab 02 – Why UID matters                          ║\n"
-printf "  ║   root vs non-root images on OpenShift              ║\n"
+printf "  ║   Lab 02 – Why UID matters                           ║\n"
+printf "  ║   root vs non-root images on OpenShift               ║\n"
 printf "  ╚══════════════════════════════════════════════════════╝\n"
 printf "%s\n" "${RESET}"
 printf "%sPress ENTER to advance through each command.%s\n" "${DIM}" "${RESET}"

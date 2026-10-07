@@ -1,0 +1,9 @@
+# keep the build context small and free of secrets
+.git
+.gitignore
+*.md
+.DS_Store
+**/*.swp
+.env
+*.pem
+*.key

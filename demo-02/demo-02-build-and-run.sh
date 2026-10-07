@@ -68,7 +68,7 @@ trap cleanup EXIT
 
 echo -e "${BOLD}"
 echo "  ╔══════════════════════════════════════════════════════╗"
-echo "  ║      Demo 02 – Build & Run a Container              ║"
+echo "  ║      Demo 02 – Build & Run a Container               ║"
 echo "  ╚══════════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 echo -e "${DIM}Press ENTER to advance through each command.${RESET}"

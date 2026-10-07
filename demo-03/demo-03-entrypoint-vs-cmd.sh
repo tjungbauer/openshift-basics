@@ -65,7 +65,7 @@ trap cleanup EXIT
 
 echo -e "${BOLD}"
 echo "  ╔══════════════════════════════════════════════════════╗"
-echo "  ║       Demo 03 – ENTRYPOINT vs CMD                   ║"
+echo "  ║       Demo 03 – ENTRYPOINT vs CMD                    ║"
 echo "  ╚══════════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 echo -e "${DIM}Press ENTER to advance through each command.${RESET}"

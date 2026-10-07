@@ -6,7 +6,7 @@
 # ---------------------------------------------------------------------------
 set -euo pipefail
 
-IMG="${1:-registry.access.redhat.com/ubi9/httpd-24:latest}"
+IMG="${1:-registry.access.redhat.com/ubi10/httpd-24}"
 
 # ── colours & helpers ──────────────────────────────────────────────────────
 BOLD='\033[1m'
@@ -64,9 +64,9 @@ trap cleanup EXIT
 
 echo -e "${BOLD}"
 echo "  ╔══════════════════════════════════════════════════════╗"
-echo "  ║        Demo 01 – Container Image Basics             ║"
+echo "  ║        Demo 01 – Container Image Basics              ║"
 echo "  ║                                                      ║"
-echo "  ║  Image: ${IMG}"
+echo "  ║  Image: ${IMG}    ║"
 echo "  ╚══════════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 echo -e "${DIM}Press ENTER to advance through each command.${RESET}"
@@ -83,8 +83,8 @@ banner "1 · Layers – one entry per build step, newest on top"
 comment "Show the layer history of the image"
 run "podman history ${IMG}"
 
-comment "More details – exact size and the Dockerfile instruction that created each layer"
-run "podman history --no-trunc --format '{{.Size}} {{.CreatedBy}}' ${IMG}"
+#comment "More details – exact size and the Dockerfile instruction that created each layer"
+#run "podman history --no-trunc --format '{{.Size}} {{.CreatedBy}}' ${IMG}"
 
 # ── Section 2: Metadata ───────────────────────────────────────────────────
 banner "2 · Metadata – who runs it, which ports, what starts"
