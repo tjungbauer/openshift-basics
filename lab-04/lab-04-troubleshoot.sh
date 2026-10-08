@@ -9,7 +9,7 @@ set -euo pipefail
 
 REGISTRY="${1:-quay.io/tjungbau}"
 NGINX_IMAGE="docker.io/library/nginx:1.28"
-RH_NGINX_IMAGE="registry.access.redhat.com/ubi10/nginx-126"
+RH_NGINX_IMAGE="registry.access.redhat.com/hi/nginx:1.28"
 DEPLOY_NAME="broken"
 APP_NAME="hello-web"
 
@@ -149,7 +149,7 @@ printf "%sNamespace:    %s%s%s\n" "${DIM}" "${YELLOW}" "${NAMESPACE}" "${RESET}"
 
 printf "\n%s" "${BOLD}"
 printf "  ╔══════════════════════════════════════════════════════╗\n"
-printf "  ║   Lab 04 – Troubleshoot a broken deployment         ║\n"
+printf "  ║   Lab 04 – Troubleshoot a broken deployment          ║\n"
 printf "  ║   deploy · investigate · debug · fix                 ║\n"
 printf "  ╚══════════════════════════════════════════════════════╝\n"
 printf "%s\n" "${RESET}"
@@ -278,7 +278,7 @@ comment "Deploy the Red Hat nginx image"
 run "oc create deployment rh-nginx --image=${RH_NGINX_IMAGE} --port=8080"
 
 comment "Wait a few seconds..."
-sleep 5
+sleep 10
 
 comment "Check pod status -- it went to Completed, not Running!"
 run "oc get pods -l app=rh-nginx"

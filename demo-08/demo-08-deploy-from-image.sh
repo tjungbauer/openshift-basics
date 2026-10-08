@@ -127,8 +127,8 @@ trap cleanup EXIT
 
 printf "\n%s" "${BOLD}"
 printf "  ╔══════════════════════════════════════════════════════╗\n"
-printf "  ║   Demo 08 – Deploy a container image on OpenShift   ║\n"
-printf "  ║   deployment · service · route · curl               ║\n"
+printf "  ║   Demo 08 – Deploy a container image on OpenShift    ║\n"
+printf "  ║   deployment · service · route · curl                ║\n"
 printf "  ╚══════════════════════════════════════════════════════╝\n"
 printf "%s\n" "${RESET}"
 printf "%sImage:     %s%s%s\n" "${DIM}" "${CYAN}" "${IMAGE}" "${RESET}"
